@@ -5,6 +5,8 @@ package pertemuan1;
 public class Pertemuan1 {
 
     public static void main(String[] args) {
+        /*  //Using Employee.class
+        
         Employee manusia0;
         Employee manusia1;
         manusia0 = new Employee(1908,"Budi","Raharjo",5000000);
@@ -15,5 +17,9 @@ public class Pertemuan1 {
         
         System.out.println(manusia0);
         System.out.println(manusia1);
+
+        */
+        
+        
     }
 }
