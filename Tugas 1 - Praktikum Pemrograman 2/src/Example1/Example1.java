@@ -1,7 +1,7 @@
 
-package tugas1;
+package Example1;
 
-public class Tugas1 {
+public class Example1 {
     
     public static void main(String[] args) {
         Customer manusia = new Customer(1998,"NishimaQ",50);

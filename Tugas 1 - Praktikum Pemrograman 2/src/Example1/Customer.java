@@ -1,5 +1,5 @@
 
-package tugas1;
+package Example1;
 
 public class Customer {
     private int ID;
