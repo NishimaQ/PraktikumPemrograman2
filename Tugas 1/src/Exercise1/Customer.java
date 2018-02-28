@@ -1,5 +1,5 @@
 
-package Example1;
+package Exercise1;
 
 public class Customer {
     private int ID;

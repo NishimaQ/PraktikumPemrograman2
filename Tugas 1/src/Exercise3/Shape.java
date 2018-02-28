@@ -1,5 +1,5 @@
 
-package Example3;
+package Exercise3;
 
 
 public class Shape {

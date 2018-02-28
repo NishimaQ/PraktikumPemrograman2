@@ -1,5 +1,5 @@
 
-package Example2;
+package Exercise2;
 
 public class Ball {
     private float x, y;

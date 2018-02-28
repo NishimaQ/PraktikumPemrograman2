@@ -1,5 +1,5 @@
 
-package Example1;
+package Exercise1;
 
 public class Invoice {
     private int ID;
