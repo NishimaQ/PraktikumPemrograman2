@@ -17,6 +17,13 @@ public class Pertemuan7 {
         System.out.println("");
         
         uwaw.sorting();
+        uwaw.displayNode();
+        
+        uwaw.swap(2, 3);
+        uwaw.displayNode();
+        
+        Heap uwew = new Heap(10);
+        uwew.displayNode();
     }
     
 }
