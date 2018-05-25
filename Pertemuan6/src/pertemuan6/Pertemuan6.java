@@ -23,8 +23,9 @@ public class Pertemuan6 {
         bt.displayNode(bt.root);
         System.out.println("");
         
-        bt.deleteNode(bt.root,10);
-        bt.displayNode(bt.root);
+        bt.topView();
+        
+        bt.height(bt.root, 0);
         
     }
     

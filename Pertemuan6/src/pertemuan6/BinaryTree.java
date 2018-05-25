@@ -1,11 +1,56 @@
 
 package pertemuan6;
 
+import java.util.LinkedList;
+
 public class BinaryTree {
     public Node root;
+    private LinkedList<Node> topView; 
+    private int maxHeight, countedLeft=0, countedRight=0;//for counting height
     
     BinaryTree(){
+        topView = new LinkedList<Node>();
+        maxHeight = 0;
         
+    }
+    
+    public void topViewLeft(Node parent){
+        if(parent.leftChild != null) topViewLeft(parent.leftChild);
+        this.topView.add(parent);
+    }
+    
+    public void topViewRight(Node parent){
+        this.topView.add(parent);
+        if(parent.rightChild != null) topViewRight(parent.rightChild);
+                
+    }
+    
+    public void topView(){        
+        topViewLeft(this.root);
+        topViewRight(this.root.rightChild);
+        System.out.println("\nTop View");
+        for(Node node : this.topView){
+            System.out.print(node.getValue()+" ");
+        }
+        
+    }
+    
+    public void height(Node parent, int currHeight){
+        int counter = currHeight;
+        if(parent.leftChild != null){
+            counter++;
+            height(parent.leftChild, counter);
+        }
+        if(counter > this.maxHeight) this.maxHeight = counter;
+        
+        counter = currHeight;
+        if(parent.rightChild != null){
+            counter++;
+            height(parent.rightChild, counter);
+        }
+        if(counter > this.maxHeight) this.maxHeight = counter;
+        
+        if(parent == this.root) System.out.println("\n"+this.maxHeight);
     }
     
     public void addNode(Node node){
@@ -46,14 +91,6 @@ public class BinaryTree {
             }
         }
         return result;
-    }
-    
-    public void displayNode(Node root){
-        if(root != null){
-            displayNode(root.leftChild);
-            System.out.print(root.getValue()+" ");
-            displayNode(root.rightChild);
-        }
     }
     
     public void deleteNode(Node root,int value){
@@ -124,5 +161,13 @@ public class BinaryTree {
                 }
             }
         System.out.println("Node has been deleted~");        
+    }
+    
+    public void displayNode(Node root){
+        if(root != null){
+            displayNode(root.leftChild);
+            System.out.print(root.getValue()+" ");
+            displayNode(root.rightChild);
+        }
     }
 }
